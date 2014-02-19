@@ -19,7 +19,7 @@ html,body {
     -webkit-font-smoothing:antialiased;
     height:100%;
     /* The html and body elements cannot have any padding or margin. */
-    font-family:'Open Sans', sans-serif;
+    font-family: "Helvetica Neu", Helvetica, Arial, sans-serif, 'Open Sans', ;
     background-color:#f4f5f6;
 }
 
@@ -32,6 +32,12 @@ html,body {
     /* Negative indent footer by it's height */
     margin:0 auto -60px;
     color:#333;
+}
+
+#wrap #features h3 {
+    font-family: Didot, "Didot LT STD";
+    font-style: italic;
+
 }
 
 /* Set the fixed height of the footer here */
@@ -237,7 +243,7 @@ header {
 }
 
 .btn-landing {
-    font-family:Open Sans, sans-serif;
+    font-family: Open Sans, sans-serif;
     min-width:200px;
     padding:20px;
     font-size:18px!important;
@@ -585,7 +591,7 @@ a.post-entry:hover {
 
 /*Support*/
 #support-banner {
-    background-image:url(../images/background/tweed_@2X.png);
+    background-image:url(../images/background/use_your_illusion.png);
     background-repeat:repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
@@ -613,7 +619,7 @@ a.post-entry:hover {
 
 /*Testimonials*/
 #testimonials-background {
-    background-image:url(../images/background/tweed_@2X.png);
+    background-image:url(../images/background/blue_gray_tile.jpg);
     background-repeat:repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
