@@ -614,7 +614,7 @@ a.post-entry:hover {
 
 /*Testimonials*/
 #testimonials-background {
-    background-image:url(../images/background/knitting250px_@2X.png);
+    background-image:url(../images/background/cloth_alike_@2X.png);
     background-repeat:repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
@@ -646,13 +646,12 @@ a.post-entry:hover {
 }
 
 #contact-background {
-    background-image:url(../images/background/IMG_5605.JPG);
-    background-repeat:no-repeat;
+    background-image:url(../images/background/cloth_alike_@2X.png);
+    background-repeat:repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
     padding:150px 0;
     text-shadow:1px 1px 1px #000;
-    background-size:cover;
 }
 
 #contact-background h1, #pricing-background h1 {
@@ -1253,13 +1252,12 @@ input[type="color"]:focus,
 }
 /* == Pricing Tables == */
 #pricing-background {
-    background-image:url(../images/background/DSCN0753.JPG);
-    background-repeat:no-repeat;
+    background-image:url(../images/background/cloth_alike_@2X.png);
+    background-repeat:repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
     padding:150px 0;
     text-shadow:1px 1px 1px #000;
-    background-size:cover;
 }
 
 #pricing .price-plan {
