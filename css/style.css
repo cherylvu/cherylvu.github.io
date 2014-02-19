@@ -645,12 +645,13 @@ a.post-entry:hover {
 }
 
 #contact-background {
-    background-image:url(../images/background/tweed_@2X.png);
-    background-repeat:repeat;
+    background-image:url(../images/background/contact.jpg);
+    background-repeat:no-repeat;
     background-attachment:fixed;
     background-color:#F0FCFF;
     padding:150px 0;
     text-shadow:1px 1px 1px #000;
+    background-size:cover;
 }
 
 #contact-background h1, #pricing-background h1 {
