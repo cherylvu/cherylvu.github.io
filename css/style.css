@@ -601,6 +601,8 @@ a.post-entry:hover {
     background-color:#F0FCFF;
     padding:150px 0;
     text-shadow:1px 1px 1px #000;
+    background-size:cover;
+
 }
 
 #support-banner h1 {
@@ -3103,7 +3105,6 @@ ul#twitter li{
     width: 100%;
     margin: 0;
     border-top: 1px solid #DDDCDC;
-    border-bottom: 1px solid #DDD;
     line-height: 1.2;
     background: #fff;
     o-transition: color .12s ease-out, background .12s ease-out;
@@ -3114,13 +3115,15 @@ ul#twitter li{
 }
 
 .call-to-action-link a:hover {
-    background: #464646;
+    background: #D5007F;
     color: #999;
 }
+
 .call-to-action-link a span {
     display: inline-block;
     margin: 0 auto;
     color: #c2c2c2;
+    font-family: helvetica;
 }
 
 /*HOME PAGE MULTI PAGES CSS*/
