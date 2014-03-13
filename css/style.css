@@ -35,9 +35,8 @@ html,body {
 }
 
 #wrap #features h3 {
-    font-family: Didot, "Didot LT STD";
-    font-style: italic;
-
+    font-family: "Helvetica Neue", Didot, "Didot LT STD";
+    font-weight: 300;
 }
 
 /* Set the fixed height of the footer here */
@@ -336,6 +335,10 @@ hr.line {
     margin-top:20px;
 }
 
+#support .container .span4 {
+    margin-top:60px;
+}
+
 .margintop40 {
     margin-top:40px;
 }
@@ -343,6 +346,7 @@ hr.line {
 .paddingbottom40 {
     padding-bottom:40px;
 }
+
 
 .center {
     text-align:center;
@@ -626,7 +630,7 @@ a.post-entry:hover {
 }
 
 /*Testimonials*/
-#testimonials-background {
+#articles-background {
     background-image:url(../images/background/testimonials.jpg);
     background-repeat:repeat;
     background-attachment:fixed;
@@ -636,7 +640,7 @@ a.post-entry:hover {
     background-size: cover;
 }
 
-#testimonials-background h1 {
+#articles-background h1 {
     text-align:center;
     margin:0;
     color:#fff;
@@ -1174,6 +1178,7 @@ html[xmlns] .slides {
 .big-heading {
     font-size:56px;
     line-height:1;
+    padding-top: 50px;
     letter-spacing:-3px;
     text-align:center;
     font-family: Didot, "Didot LT STD";
