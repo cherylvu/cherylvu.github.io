@@ -1339,6 +1339,16 @@ input[type="color"]:focus,
     padding:10px 0;
     background-color:#cfcfcf;
 }
+.rescue{
+     position:relative;
+    width:auto;
+    background:rgba(105,66,68,0.71);
+    border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
+    margin-bottom:5px;
+}
+
 
 #pricing .price-plan .price p {
     text-align:center;
