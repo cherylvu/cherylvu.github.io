@@ -1356,15 +1356,15 @@ input[type="color"]:focus,
 }
 
 #pricing .price-plan .price .inside .super {
-    font-size:24px;
+    font-size:20px;
     position:relative;
-    top:-56px;
-    left:-7px;
+    top:-6px;
+    left:-10px;
 }
 
 #pricing .price-plan .price .inside .amt {
     letter-spacing:-4px;
-    font-size:104px;
+    font-size:45px;
     margin-right:6px;
     font-weight:300;
     margin-left:-5px;
