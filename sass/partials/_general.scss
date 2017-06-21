@@ -1,5 +1,38 @@
 /* ------------------ GENERAL STYLES ------------------ */
 
+body {
+	&.no-preloader {
+		display: block;
+	}
+
+	#jpreLoader {
+		left: 0 !important;
+		width: 100%;
+		height: 1px;
+	}
+
+	#jprePercentage {
+		height: auto;
+		top: -80px;
+		font-size: 48px;
+		font-weight: normal;
+		font-family: $secondary-font-family;
+		text-shadow: none;
+		color: $body-text-color;
+	}
+	
+	#jpreOverlay {
+		background-color: #fafafa;
+	}
+
+	#jpreBar {
+		@include box-shadow(none);
+
+		background-image: none;
+		background-color: $body-text-color;
+	}
+}
+
 @include font-face("brankic", font-files(
 	"brankic.svg",
 	"brankic.ttf",
@@ -30,6 +63,7 @@
 
 .nav > li > a:focus {
 	background-color: transparent;
+	outline: none;
 }
 
 .navbar-nav {
@@ -65,6 +99,7 @@
 				border-bottom: 2px solid $heading-text-color;
 				padding-bottom: 0;
 				background-color: transparent;
+				outline: none;
 			}
 		}
 	}
@@ -100,11 +135,25 @@
 				> a {
 					color: $heading-text-color;
 
+					@include max-screen($screen-small - 1px) {
+						color: darken(#fff, 10%);
+						border-bottom: none;
+						padding-top: 15px;
+						padding-bottom: 15px;
+
+						&:hover {
+							color: #fff;
+							padding-top: 15px;
+							padding-bottom: 15px;
+							text-decoration: underline;
+						}
+					}
+
 					&:hover {
 						border-bottom-color: $heading-text-color;
 					}
 				}
-				
+
 				&.active {
 					> a {
 						border-bottom-color: $heading-text-color;
@@ -126,25 +175,9 @@
 @include max-screen($screen-small - 1px) {
 	.navbar-collapse {
 		background-color: #646464;
-
-		.navbar-nav {
-			> li > a {
-				color: darken(#fff, 10%);
-				border-bottom: none;
-				padding-top: 15px;
-				padding-bottom: 15px;
-
-				&:hover {
-					color: #fff;
-					padding-top: 15px;
-					padding-bottom: 15px;
-					text-decoration: underline;
-				}
-			}
-		}
-		
 	}
 }
+
 
 /* --------------------- */
 /* BUTTONS
@@ -155,6 +188,10 @@
 	@include transition-property(border-color);
 	@include transition-duration(0.2s);
 	@include transition-timing-function(linear);
+
+	&:active, &.active {
+		@include box-shadow(none);
+	}
 }
 
 .btn-lg {
@@ -177,6 +214,21 @@
 		background-color: $secondary-accent-color;
 		border-color: darken($secondary-accent-color, 5%);
 	}
+
+	&:active:focus, &.active:focus {
+		background-color: darken($secondary-accent-color, 5%);
+		border-color: darken($secondary-accent-color, 15%);
+	}
+}
+
+.btn-outline {
+	background-color: transparent;
+	border-color: #fff;
+	color: #fff;
+
+	&:hover, &:focus, &:active, &.active {
+		color: #fff;
+	}
 }
 
 .btn-primary {
@@ -186,6 +238,11 @@
 	&:hover, &:focus, &:active, &.active {
 		background-color: $primary-accent-color;
 		border-color: darken($primary-accent-color, 5%);
+	}
+
+	&:active:focus, &.active:focus {
+		background-color: darken($primary-accent-color, 5%);
+		border-color: darken($primary-accent-color, 15%);
 	}
 }
 
@@ -198,7 +255,6 @@
 		background-color: lighten($primary-accent-color, 10%);
 		border-color: $primary-accent-color;
 	}
-
 }
 
 
@@ -232,7 +288,6 @@ a {
 		background-color: $section-bg-most-dark;
 		color: #fafafa;
 	}
-
 }
 
 .section-heading {
@@ -257,13 +312,17 @@ a {
 		@include inline-block;;
 
 		width: 100px;
-		border-top: 1px solid $horizontal-line-color;
+		border-top: 1px solid $heading-text-color;
 	}
 }
 
 .section-content {
 	h3 {
 		color: $subheading-text-color;
+	}
+
+	.sub-section {
+		margin-top: 30px;
 	}
 }
 
@@ -309,32 +368,12 @@ a {
 	visibility: hidden;
 }
 
-body {
-	#jpreLoader {
-		left: 0 !important;
-		width: 100%;
-		height: 1px;
-	}
+.parsley-error-list {
+	list-style-type: none;
 
-	#jprePercentage {
-		height: auto;
-		top: -80px;
-		font-size: 48px;
-		font-weight: normal;
-		font-family: $secondary-font-family;
-		text-shadow: none;
-		color: $body-text-color;
+	li {
+		font-size: 12px;
+		color: #d2322d;
 	}
-	
-	#jpreOverlay {
-		background-color: #fafafa;
-	}
-
-	#jpreBar {
-		@include box-shadow(none);
-
-		background-image: none;
-		background-color: $body-text-color;
-	}
-
 }
+

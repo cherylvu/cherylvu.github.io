@@ -1,24 +1,24 @@
 /* ------------------ CONTACT ------------------ */
 
-.google-map {
-	margin-bottom: 60px;
-
-	#map-canvas {
-		height: 300px;
-	}	
-}
-
+/* --------------------- */
+/* CONTACT INFO
+/* --------------------- */
 
 .contact-info {
-	text-align: center;
+	li {
+		padding-bottom: 30px;
+	}
 
 	h3, i {
 		color: $heading-text-color;
 	}
-	
-	h3 {
-		margin-top: 10px;
-		margin-bottom: 20px;
+
+	h3, p {
+		padding-left: 52px;
+	}
+
+	p {
+		font-size: 14px;
 	}
 
 	i {
@@ -26,11 +26,16 @@
 	}
 
 	@include max-screen($screen-small) {
-		.row > div {
-			margin-bottom: 50px;
-		}	
+		text-align: center;
+
+		i {
+			width: 100%;
+		}
+
+		h3, p {
+			padding-left: 0;
+		}
 	}
-	
 }
 
 @include max-screen($screen-xsmall) {
@@ -38,3 +43,60 @@
 		padding-bottom: 0;
 	}
 }
+
+/* --------------------- */
+/* CONTACT FORM
+/* --------------------- */
+
+.contact-form {
+	overflow: hidden;
+	margin-bottom: 40px;
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		@include inline-block;
+		@include box-sizing(border-box);
+
+		padding: 12px;
+		margin-bottom: 7px; 
+		min-height: 3em;
+		border: none;
+		background-color: darken($section-bg-color-default, 3%);
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	} 
+
+	textarea {
+		width: 100%;
+		display: block;
+		padding: 14px;
+		min-height: 130px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		@include border-radius(3px);
+		@include box-shadow(none !important);
+
+		&:focus {
+			outline: none;
+		}
+
+	}
+
+	.alert,
+	label {
+		display: none;
+	}
+
+	@include max-screen($screen-xsmall) {
+		.btn-primary {
+			width: 100%;
+		}
+	}
+}
+

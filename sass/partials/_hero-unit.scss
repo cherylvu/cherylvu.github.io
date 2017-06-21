@@ -2,8 +2,11 @@
 
 .hero-unit {
 	position: relative;
-	overflow: hidden;
 	height: 100%;
+
+	&.has-overlay {
+		background: rgba(80, 80, 80, 0.85);
+	}
 
 	&.hero-light {
 		.hero-content .hero-text .hero-heading,
@@ -31,24 +34,33 @@
 		margin-top: -10em;
 		z-index: 2;
 
-		@include screen(320px, $screen-xsmall) {
+		@include max-screen($screen-small) {
+			text-align: center;
+			margin-top: -100px;
+		}
+
+		@include screen(321px, $screen-xsmall) {
 			margin-top: -40px;
 		}
 
 		@include max-screen(320px) {
-			margin-top: -80px;
+			margin-top: -60px;
 		}
 
 		.hero-text {
 			.hero-heading,
 			p {
 				font-family: $secondary-font-family;
-				color: $heading-text-color;
+				color: #fff;
 				font-weight: 300;
 			}
 
 			.hero-heading {
-				font-size: 6em;
+				font-size: 5em;
+
+				.name {
+					border-bottom: 2px solid #fff;
+				}
 
 				@include max-screen($screen-small) {
 					font-size: 4em;
@@ -59,11 +71,14 @@
 				}
 			}
 
+			.looper {
+				margin-top: 20px;
+			}
+
 			p {
 				@include inline-block;
 
 				font-size: 2em;
-				background-color: rgba(#000, 0.5);
 				color: #fff;
 				padding: 0 10px;
 
@@ -99,7 +114,7 @@
 
 			@include max-screen($screen-xsmall) {
 				#btn-about, #btn-contact {
-					padding: 10px 16px;	
+					padding: 5px 11px;
 				}
 			}
 		}
@@ -148,7 +163,7 @@
 			left: 50%;
 			bottom: 40px;
 
-			@include max-screen($screen-xsmall) {
+			@include max-screen($screen-small) {
 				display: none;
 			}
 
@@ -182,12 +197,6 @@
 		}
 	}
 
-	// &.no-video-bg {
-	// 	background-image: url('assets/videos/motion.png');
-	// 	background-repeat: no-repeat;
-	// 	background-position: center 0;
-	// }
-
 	#controls {
 		#pauseplay {
 			position: absolute;
@@ -208,10 +217,30 @@
 			}
 		}
 
-		@include max-screen($screen-xsmall) {
+		@include max-screen($screen-small) {
 			display: none;
 		}
 	}
-
 }
+
+#supersized-loader {
+	background: {
+		image: image-url('bx_loader.gif');
+		repeat: no-repeat;
+		position: center center;
+	}
+}
+
+/* the animation is taken form animate.css */
+.looper.slide.down .item {
+
+	-webkit-animation-name: slideInDown;
+	animation-name: slideInDown;
+
+	&.active.go {
+		-webkit-animation-name: fadeOut;
+  		animation-name: fadeOut;
+	}
+}
+
 

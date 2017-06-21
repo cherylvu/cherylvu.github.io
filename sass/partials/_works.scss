@@ -134,6 +134,15 @@
 		}
 	}
 
+	.media-popup > i {
+		position: absolute;
+		top: 25%;
+		color: #fff;
+		font-size: 48px;
+		left: 50%;
+		margin-left: -20px;
+	}
+
 	.image-overlay {
 		@include opacity(0);
 		@include transition-property(opacity);
@@ -310,3 +319,5 @@ img.mfp-img {
 		}
 	}
 }
+
+

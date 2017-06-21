@@ -31,7 +31,7 @@
 				@include transition-duration(0.2s);
 				@include transition-timing-function(linear);
 				@include opacity(0);
-				
+
 				font-size: 0.8em;
 				margin-left: -80px;
 
@@ -56,12 +56,12 @@
 				}
 			}
 		}
-		
 	}
 }
 
 @include max-screen($screen-xsmall) {
 	.services {
 		padding-bottom: 0;
-	}	
+	}
 }
+
