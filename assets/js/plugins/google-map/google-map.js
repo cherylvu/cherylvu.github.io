@@ -111,7 +111,7 @@
 
 		function codeAddress() {
 		
-			var address = "Google California, 106 1/2 Judge John Aiso Street, Los Angeles, CA, USA";
+			var address = "Google New York, 76 Ninth Ave, New York, NY, USA";
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == google.maps.GeocoderStatus.OK) {
 					map.setCenter(results[0].geometry.location);
